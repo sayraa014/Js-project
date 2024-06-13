@@ -1,68 +1,40 @@
-const NFTS[]
-
-
-function mintHFT (_name, _haircolour, _dresstype, _jewellery) {
-
-const NFT - {
-
+const NFTs = []
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function mintNFT (_name, _haircolour,_dresstype) {
+    const NFT =
+    {
+        
 "name": _name,
-
-
-
 "haircolour": _haircolour,
+"dresstype": _dresstype
 
-
-
-"dresstype": _dresstype,
-
-
-
-"jewellery": _jewellery
-
-
-
+    }
+    NFTs.push(NFT);
+    console.log("Minted:" + _name);
 }
 
-
-
-
-
-console.log("Minted: "+_name);
-
-
-
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+for(let i = 0; i < NFTs.length; i++) {
+    console.log("NFT: \t\t" + (i+1));
+    console.log("name: \t\t" + NFTs[i].name);
+    console.log("haircolour: " + NFTs[i].haircolour);
+    console.log("dresstype: " + NFTs[i].dresstype);
+    console.log("------------------");
+    }
 }
-Function listNFTs () {
 
-	for(let i = 0; i < NFTs.length; i++) {
-	
-	• console.log("\nID:" + (i + 1);
-	
-	console.log("Name:" + NFTs[i].name);
-	
-	console.log("haircolor:" 40 + NFTs[i].eyeColor);
-	
-     console.log("dressType:" + NFTs[i].shirtType);
-	
-	console.log("jewellery" + NFTs[i].bling);
-	
-	}
-	function getTotalSupply() {
+// print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+    console.log("\n" +NFTs.length);
+}
 
-		console.log("\n" + NFTs.length);
-		
-		/ call your functions below this line
-		
-		mintNFT("Sakshi", "Blue". "maxi", "Ear rings"); 
-		
-		intNFT("Samridhi", "white" "short dress" "necklace");
-		
-		intNFT("Thomson", "green",  "midi" "ring");
-		
-		intNFT("John", "pink" "short dress" "necklace");
-		
-		ListNFTs();
-		
-		getTotalSupply();
-
-	}
+// call your functions below this line
+	mintNFT("Sanjana", "Blue", "long dress"); 
+	mintNFT("Thana", "black",  "short dress");
+	mintNFT("tina", "brown", "traditional dress");
+listNFTs();
+getTotalSupply()
